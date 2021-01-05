@@ -4,22 +4,22 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class iftest {
+	
 	public static void main (String[] args) {
 	
+		Scanner input = new Scanner(System.in); 
 
-	Scanner input = new Scanner(System.in); 
+		System.out.println("Enter input"); 
 
-	System.out.println("Enter input"); 
+		int value = input.nextInt();	 
 
-	int value = input.nextInt();	 
-
-	System.out.println(value + determineString(value)); 
-	
-	evenTest(value);
+		System.out.println(value + generateString(value)); 
+		
+		evenTest(value);
 		
 	}
 
-	public static String determineString (int x) {
+	public static String generateString (int x) {
 		
 		String string; 		
 		
@@ -33,9 +33,9 @@ public class iftest {
 
 	public static void evenTest (int x) {
 		if (x % 2 == 0) 
-			assertEquals(determineString(x), " is even"); 
+			assertEquals(generateString(x), " is even"); 
 
-		else assertEquals(determineString(x), " is odd");
+		else assertEquals(generateString(x), " is odd");
 	}
 
 }
