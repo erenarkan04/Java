@@ -2,7 +2,7 @@
 
 public class variables {
 	public static void main (String[] args) {
-		String myJob = "Financial analyst";  
+		String myJob = "aspiring programmer";  
 		System.out.println(myJob); 
 	} 
 }
