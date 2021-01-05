@@ -1,5 +1,8 @@
 import java.util.Scanner;
-import junit.framework.*; 
+import junit.framework.*;
+//import junit.framework.TestCase;
+import org.junit.*;
+import static org.junit.Assert.*;
 
 public class scannerex {
 
@@ -12,35 +15,39 @@ public class scannerex {
 		System.out.print("Enter your name and age :"); 
 		
 		String name = nameInput.next();		
-		int age = ageInput.nextInt(); 
+//		int age = ageInput.nextInt(); 
+		int age = "abc"; 
+		String result = name + " ! You are " + age + " years old!";
+		
+		System.out.println(result); 
 		
 
-		System.out.println(name + " ! You are " + age + " years old!"); 
 
-
-//		nameCheck(); 
-//		ageCheck(); 
+		nameCheck(name); 
+		ageCheck(age); 
 
 
 	}
 
+
 		
 
-//		public static boolean nameCheck () {
-//			if(assertEquals(name.getClass(), String.class))
-//			return true; 
-//		}
-//
-//		public static boolean ageCheck () {
-//			if(assertEquals(age.getClass(), int.class))
-//			return true; 
-//		}
-
+	
+	
+		public static void nameCheck (String namevar) {
+			assertEquals(namevar.getClass().getName(), "java.lang.String"); 
+			 
+		}
+		
+		public static void ageCheck (int agevar) {
+			assertTrue("bla", agevar == (int) agevar);
+			 
+		}
+	
 
 
 
 }
-
 
 
 

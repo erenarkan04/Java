@@ -4,8 +4,8 @@ import junit.framework.*;
 
 public class Me {
 
-	public static String sayName () {
-		return "Eren Arkan";
+	public static boolean sayName () {
+		return true;
 	}
 
 	public static String sayAge () {

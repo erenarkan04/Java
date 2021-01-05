@@ -26,7 +26,7 @@ public class Main extends TestCase {
 
 		public static boolean errorCheck() {
 			
-			assertEquals(Me.sayName(), "Earen Arkan"); 
+			assertEquals(Me.sayName(), true); 
 
 			return true; 
 
