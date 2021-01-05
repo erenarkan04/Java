@@ -1,18 +1,18 @@
 import java.util.Scanner;
 import junit.framework.*; 
 
-public class scannerex2 {
+public class scannerex {
 
 	public static void main (String[] args) {
  
 	
-		Scanner input = new Scanner(System.in); 
-
+		Scanner ageInput = new Scanner(System.in); 
+		Scanner nameInput = new Scanner(System.in);
 
 		System.out.print("Enter your name and age :"); 
 		
-		String name = input.next();		
-		int age = input.nextInt(); 
+		String name = nameInput.next();		
+		int age = ageInput.nextInt(); 
 		
 
 		System.out.println(name + " ! You are " + age + " years old!"); 
