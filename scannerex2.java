@@ -10,22 +10,17 @@ public class scanner {
 
 	
 
-	int f = intInput.nextInt(); 
-	System.out.println(f+10); 
 
 
 
-
-//	System.out.println(stringInput.next()); 
+	//System.out.println(stringInput.next()); 
  
-//	System.out.println("Enter your name: "); 
-//	System.out.println("Your name is: " + stringInput.next()); 
+	System.out.println("Enter your name: "); 
+	System.out.println("Your name is: " + stringInput.next()); 
 
 
 
-
-
-	}
+}
 
 }
 
