@@ -7,15 +7,24 @@ public class newex {
 
 	public static void main (String[] args) {
 
-		int n = 123; 
+		Scanner s = new Scanner(System.in); 
 
-		String a = String.valueOf(n); 
+		int n;
 
-		char b = a.charAt(0); 
+		while (true) {
+			System.out.println("enter #"); 
+			n = s.nextInt();
 
-		System.out.println(a.getClass().getName());
-		System.out.println(b.getClass().getName());
+			if ( n > 10 || n < 1)
+				continue; 
 
+			System.out.println(n + " is between 1 and 10"); 
+			break; 
+
+		}
 	}
 
 }
+
+
+
