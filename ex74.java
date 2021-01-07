@@ -13,11 +13,11 @@ public class ex74 {
 		
 		System.out.println(getStringAlt(n) ? "is Palindrome" : "is Not Palindrome");
 		
-		//test1(); 
-		//test2(); 
-		//test3(); 
-		//test4(); 
-		//test5(); 
+		test1(); 
+		test2(); 
+		test3(); 
+		test4(); 
+		test5(); 
 }
 
 	public static String getString (String n) {
@@ -60,19 +60,19 @@ public class ex74 {
 	}
 
 	public static void test1 () {
-		assertEquals(getStringAlt("a"), "is Palindrome"); 
+		assertEquals(getStringAlt("a"), true); 
 	}
 	public static void test2 () {
-		assertEquals(getStringAlt("aba"), "is Palindrome"); 
+		assertEquals(getStringAlt("aba"), true); 
 	}
 	public static void test3 () {
-		assertEquals(getStringAlt("aba aba"), "is Palindrome"); 
+		assertEquals(getStringAlt("aba aba"), true); 
 	}
 	public static void test4 () {
-		assertEquals(getStringAlt("abc"), "is not Palindrome"); 
+		assertEquals(getStringAlt("abc"), false); 
 	}
 	public static void test5 () {
-		assertEquals(getStringAlt("abc abc"), "is not Palindrome"); 
+		assertEquals(getStringAlt("abc abc"), false); 
 	}
 }
 
