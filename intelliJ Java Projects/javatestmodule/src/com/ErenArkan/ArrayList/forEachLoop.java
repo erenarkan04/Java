@@ -1,4 +1,4 @@
-package com.ErenArkan;
+package com.ErenArkan.ArrayList;
 
 import java.util.ArrayList;
 import java.util.Collections;

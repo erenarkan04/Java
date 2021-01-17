@@ -1,3 +1,4 @@
+package com.ErenArkan.ArrayList;
 
 import java.util.Arrays;
 import java.util.Scanner;

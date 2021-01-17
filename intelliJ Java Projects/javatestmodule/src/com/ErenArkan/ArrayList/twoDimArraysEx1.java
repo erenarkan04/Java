@@ -1,4 +1,4 @@
-package com.ErenArkan;
+package com.ErenArkan.ArrayList;
 
 public class twoDimArraysEx1 {
 
