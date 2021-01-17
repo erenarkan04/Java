@@ -30,6 +30,10 @@ public class DoublyLinkedListMain {
         employeeDoubleList.printList();
         System.out.println(employeeDoubleList.getSize());
 
+        employeeDoubleList.addBeforeItem(new Employee("Eren", "Arkan", 1994), new Employee("Jane", "Jones", 123));
+
+        employeeDoubleList.printList();
+        System.out.println(employeeDoubleList.getSize());
 
     }
 }

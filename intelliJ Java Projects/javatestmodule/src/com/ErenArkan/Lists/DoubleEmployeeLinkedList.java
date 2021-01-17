@@ -33,12 +33,23 @@ public class DoubleEmployeeLinkedList {
         size++;
     }
 
-//    public void addBeforeItem (Employee employee, Employee employeeNode) {
-//        DoubleEmployeeNode nodeToAdd = new DoubleEmployeeNode(employee);
-//        for (Employee employee : DoubleEmployeeLinkedList) {
-//            if ()
-//
-//    }
+    public void addBeforeItem (Employee employeeToAdd, Employee employeeNodeToAddBefore) {
+        DoubleEmployeeNode nodeToAdd = new DoubleEmployeeNode(employeeToAdd);
+
+        DoubleEmployeeNode indexNode = head;
+        while (true) {
+            if (indexNode.getEmployee().getId() == employeeNodeToAddBefore.getId()) break;
+            else {
+                indexNode = indexNode.getNext();
+            }
+        }
+
+        nodeToAdd.setNext(indexNode);
+        nodeToAdd.setPrev(indexNode.getPrev());
+        indexNode.getPrev().setNext(nodeToAdd);
+        indexNode.setPrev(nodeToAdd);
+
+    }
 
     public DoubleEmployeeNode removeFromFront () {
             if (isEmpty()) return null;
