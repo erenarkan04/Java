@@ -11,19 +11,20 @@ public class kaanEx1 {
 
         Scanner a = new Scanner(System.in);
 
-        if (!a.hasNextInt()) {
-            System.out.println("Enter an int value");
+        boolean invalidInput = true;
+
+        while (true) {
+            try {
+                int valueInput = a.nextInt();
+                int indexInput = a.nextInt();
+                System.out.println(Arrays.toString(addElement(array, valueInput, indexInput)));
+                break;
+            } catch (Exception e) {
+                System.out.println("Enter a valid int value");
+                a.next();
+            }
         }
 
-        int valueInput = a.nextInt();
-
-        if (!a.hasNextInt()) {
-            System.out.println("Enter an int value");
-        }
-
-        int indexInput = a.nextInt();
-
-        System.out.println(Arrays.toString(addElement(array, valueInput, indexInput)));
     }
 
     public static int[]  addElement (int[] input, int value, int index) {
