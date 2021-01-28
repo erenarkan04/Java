@@ -10,6 +10,8 @@ public class DoubleEmployeeNode {
         this.employee = employee;
     }
 
+    public DoubleEmployeeNode() { this.employee = null;}
+
     public Employee getEmployee() {
         return employee;
     }
