@@ -16,9 +16,10 @@ public class reverseLinkedList {
 
         list.printList();
         
+        reverseList(list);
 
-
-
+        System.out.println();
+        list.printList();
     }
 
     public static class linkedList {
@@ -27,17 +28,17 @@ public class reverseLinkedList {
         private int size;
 
         public void add(int input) {
-            listNode addindex = head;
+            listNode nodeToAdd = new listNode(input);
 
-            if (head == null) head = new listNode(input);
-            else if (head.getNext() == null) head.setNext(new listNode(input));
-            else {
-                do {
-                    addindex = addindex.getNext();
-                } while (addindex.getNext() != null);
-                addindex.setNext(new listNode(input));
+            if (head == null) {
+                head = nodeToAdd;
+                size++;
             }
-            size++;
+            else {
+                nodeToAdd.setNext(head);
+                head = nodeToAdd;
+                size++;
+            }
         }
 
         public void printList() {
@@ -50,23 +51,23 @@ public class reverseLinkedList {
         }
     }
 
-
-
         public static void reverseList (linkedList input) {
             if (input.head == null || input.head.getNext() == null) return;
 
-            listNode index = input.head;
+            listNode index = input.head.getNext();
             listNode prevIndex = input.head;
-            listNode nextIndex = input.head;
+            listNode nextIndex = input.head.getNext();
 
-            while (index.getNext() != null) {
+            while (index != null) {
                 nextIndex = index.getNext();
 
                 index.setNext(prevIndex);
+                if (prevIndex == input.head) prevIndex.setNext(null);
 
                 prevIndex = index;
                 index = nextIndex;
             }
+            input.head = prevIndex;
         }
 
     public static class listNode {
