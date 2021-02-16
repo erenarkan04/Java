@@ -1,11 +1,11 @@
 package com.ErenArkan.LinkedList;
 
-public class NodeEx {
+public class Node {
 
     private Integer value;
-    private NodeEx next;
+    private Node next;
 
-    public NodeEx(Integer value) {
+    public Node(Integer value) {
         this.value = value;
     }
 
@@ -17,11 +17,11 @@ public class NodeEx {
         this.value = value;
     }
 
-    public NodeEx getNext() {
+    public Node getNext() {
         return next;
     }
 
-    public void setNext(NodeEx next) {
+    public void setNext(Node next) {
         this.next = next;
     }
 

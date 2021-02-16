@@ -1,6 +1,6 @@
 package com.ErenArkan.LinkedList;
 
-public class MainEx {
+public class Main {
 
     public static void main(String[] args) {
 
@@ -11,7 +11,7 @@ public class MainEx {
         Integer four = 4;
         Integer nine = 9;
 
-        LinkedListEx list = new LinkedListEx();
+        LinkedList list = new LinkedList();
 
 //        list.addToFront(1);
 //        list.addToFront(2);

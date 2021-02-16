@@ -1,78 +1,76 @@
 package com.ErenArkan.LinkedList;
 
-import org.w3c.dom.Node;
+public class LinkedList {
 
-public class LinkedListEx {
-
-    private NodeEx head;
+    private Node head;
     private int size;
 
     public void addToFront(Integer value) {
-        NodeEx node = new NodeEx(value);
-        node.setNext(head);
-        head = node;
+        Node Node = new Node(value);
+        Node.setNext(head);
+        head = Node;
         size++;
     }
 
     public void addToEnd(Integer value) {
-        NodeEx node = new NodeEx(value);
+        Node Node = new Node(value);
 
         if (head == null) addToFront(value);
 
-        NodeEx lastNode = head;
+        Node currentNode = head;
 
-        while (lastNode.getNext() != null) {
-            lastNode = lastNode.getNext();
+        while (currentNode.getNext() != null) {
+            currentNode = currentNode.getNext();
         }
 
-        node.setNext(null);
-        lastNode.setNext(node);
+        Node.setNext(null);
+        currentNode.setNext(Node);
         size++;
     }
 
     public void addAfter(Integer valueToAdd, Integer valueToAddAfter) {
-        NodeEx node = new NodeEx(valueToAdd);
-        NodeEx nodeIndex = head;
+        Node Node = new Node(valueToAdd);
+        Node nodeIndex = head;
 
         while (valueToAddAfter != nodeIndex.getValue()) {
             nodeIndex = nodeIndex.getNext();
         }
 
-        node.setNext(nodeIndex.getNext());
-        nodeIndex.setNext(node);
+        Node.setNext(nodeIndex.getNext());
+        nodeIndex.setNext(Node);
 
         size++;
     }
 
     public void addBefore(Integer valueToAdd, Integer valueToAddBefore) {
-        NodeEx node = new NodeEx(valueToAdd);
+        Node Node = new Node(valueToAdd);
 
         if (head.getValue() == valueToAddBefore) {
             addToFront(valueToAdd);
             return;
         }
 
-        NodeEx nodeIndex = head;
-        NodeEx nodeIndexPrev = head;
+        Node nodeIndex = head;
+        Node nodeIndexPrev = head;
 
         while (valueToAddBefore != nodeIndex.getValue()) {
             nodeIndexPrev = nodeIndex;
             nodeIndex = nodeIndex.getNext();
         }
 
-        node.setNext(nodeIndex);
-        nodeIndexPrev.setNext(node);
+        Node.setNext(nodeIndex);
+        nodeIndexPrev.setNext(Node);
 
         size++;
     }
 
 
-    public NodeEx removeFromFront() {
+    public Node removeFromFront() {
         if (isEmpty()) {
             return null;
         }
 
-        NodeEx removedNode = head;
+        Node removedNode = head;
         head = head.getNext();
         size--;
         removedNode.setNext(null);
@@ -92,7 +90,7 @@ public class LinkedListEx {
             return;
         }
 
-        NodeEx index = head;
+        Node index = head;
 
         while (true) {
             if (value < index.getValue()) {
@@ -119,7 +117,7 @@ public class LinkedListEx {
     }
 
     public void printList() {
-        NodeEx current = head;
+        Node current = head;
         System.out.print("HEAD -> ");
         while (current != null) {
             System.out.print(current);
